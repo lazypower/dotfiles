@@ -1,0 +1,23 @@
+env:
+  TERM: xterm-256color
+font:
+  normal:
+    family: Hack Nerd Font
+    style: Regular
+  bold:
+    family: Hack Nerd Font
+    style: Bold
+  italic:
+    family: Hack Nerd Font # should be "Menlo" or something on macOS.
+    style: Italic
+  size: 16
+bell:
+  animation: EaseOutExpo
+  duration: 0
+# visual_bell:
+#   animation: EaseOutExpo
+#   duration: 0
+
+# Background opacity
+background_opacity: 0.92
+
