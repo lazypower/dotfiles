@@ -30,25 +30,18 @@ let g:mapleader=","
 
 " >> Telescope bindings
 nnoremap <Leader>pp :lua require'telescope.builtin'.builtin{}<CR>
-
 " most recently used files
 nnoremap <Leader>m <cmd>lua require'telescope.builtin'.oldfiles{}<CR>
-
 " find buffer
 nnoremap ; <cmd>lua require'telescope.builtin'.buffers{}<CR>
-
 " find in current buffer
 nnoremap <Leader>/ <cmd>lua require'telescope.builtin'.current_buffer_fuzzy_find{}<CR>
-
 " bookmarks
 nnoremap <Leader>' <cmd>lua require'telescope.builtin'.marks{}<CR>
-
 " git files
 nnoremap <Leader>f <cmd>lua require'telescope.builtin'.git_files{}<CR>
-
 " all files
 nnoremap <Leader>bfs <cmd>lua require'telescope.builtin'.find_files{}<CR>
-
 " ripgrep like grep through dir
 nnoremap <Leader>rg <cmd>lua require'telescope.builtin'.live_grep{}<CR>
 
@@ -67,6 +60,23 @@ nnoremap <silent> gn    <cmd>lua vim.lsp.buf.rename()<CR>
 nnoremap <silent> ga    <cmd>Lspsaga code_action<CR>
 xnoremap <silent> ga    <cmd>Lspsaga range_code_action<CR>
 nnoremap <silent> gs    <cmd>Lspsaga signature_help<CR>
+
+" Set spellcheck lang
+set spelllang=en
+set spellsuggest=best,9
+
+" Enable spellcheck on markdown
+augroup markdownSpell
+  autocmd FileType markdown setlocal spell
+  autocmd BufRead,BufNewFile *.md setlocal spell
+augroup END
+
+augroup gitcommitSpell
+  autocmd FileType gitcommit setlocal spell
+augroup END
+
+" Lang-Server LUA configuration
+" Complemented by the files found in lua/*.lua
 
 "require("completion")
 
