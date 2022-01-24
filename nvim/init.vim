@@ -13,6 +13,7 @@ call plug#begin()
 	Plug 'kyazdani42/nvim-tree.lua'
     Plug 'NLKNguyen/papercolor-theme'
 	Plug 'hashivim/vim-terraform'
+	Plug 'lewis6991/gitsigns.nvim'
 call plug#end()
 
 colorscheme PaperColor
@@ -89,4 +90,5 @@ require("lsp")
 require("statusbar")
 require("treesitter")
 require'nvim-tree'.setup{}
+require('gitsigns').setup()
 EOF
