@@ -10,7 +10,9 @@ call plug#begin()
     Plug 'nvim-treesitter/nvim-treesitter-textobjects'
     Plug 'ntbbloodbath/galaxyline.nvim', { 'branch': 'main' }
     Plug 'kyazdani42/nvim-web-devicons'  " needed for galaxyline icons
+	Plug 'kyazdani42/nvim-tree.lua'
     Plug 'NLKNguyen/papercolor-theme'
+	Plug 'hashivim/vim-terraform'
 call plug#end()
 
 colorscheme PaperColor
@@ -39,14 +41,16 @@ nnoremap <Leader>/ <cmd>lua require'telescope.builtin'.current_buffer_fuzzy_find
 " bookmarks
 nnoremap <Leader>' <cmd>lua require'telescope.builtin'.marks{}<CR>
 " git files
-nnoremap <Leader>f <cmd>lua require'telescope.builtin'.git_files{}<CR>
+nnoremap <Leader>gf <cmd>lua require'telescope.builtin'.git_files{}<CR>
 " all files
-nnoremap <Leader>bfs <cmd>lua require'telescope.builtin'.find_files{}<CR>
+nnoremap <Leader>f <cmd>lua require'telescope.builtin'.find_files{}<CR>
 " ripgrep like grep through dir
 nnoremap <Leader>rg <cmd>lua require'telescope.builtin'.live_grep{}<CR>
+nnoremap <Leader>t <cmd>:NvimTreeToggle<CR>
+
+
 
 " >> Lsp key bindings
-nnoremap <silent> gd    <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> <C-]> <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gD    <cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
@@ -84,4 +88,5 @@ lua <<EOF
 require("lsp")
 require("statusbar")
 require("treesitter")
+require'nvim-tree'.setup{}
 EOF
