@@ -14,6 +14,7 @@ call plug#begin()
     Plug 'NLKNguyen/papercolor-theme'
 	Plug 'hashivim/vim-terraform'
 	Plug 'lewis6991/gitsigns.nvim'
+	Plug 'ellisonleao/glow.nvim'
 call plug#end()
 
 colorscheme PaperColor
