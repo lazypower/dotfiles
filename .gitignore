@@ -1,0 +1,4 @@
+nvim/plugin
+
+# Ignore old files
+*.old
