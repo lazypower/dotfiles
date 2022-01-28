@@ -9,8 +9,8 @@ vim.g.nocompatible = true
 vim.g.mapleader = ","
 
 -- Buffers
-vim.bo.shiftwidth = 4
-vim.bo.tabstop = 4
+vim.g.shiftwidth = 4
+vim.g.tabstop = 4
 
 -- Spellcheck
 vim.g.spellang = "en"
