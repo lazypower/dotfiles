@@ -51,6 +51,9 @@ nnoremap <Leader>f <cmd>lua require'telescope.builtin'.find_files{}<CR>
 nnoremap <Leader>rg <cmd>lua require'telescope.builtin'.live_grep{}<CR>
 nnoremap <Leader>t <cmd>:NvimTreeToggle<CR>
 
+" Buffer navigation in split view
+map <Leader>l <C-W><C-L>
+map <Leader>h <C-W><C-H>
 
 
 " >> Lsp key bindings
